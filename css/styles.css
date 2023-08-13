@@ -148,9 +148,8 @@ body{
 #inicio .row .col-12 .cont-icon{
     width:100px;
     position: absolute;
-    /* border:1px solid red; */
-    left:25%;
-    /* top: 50%; */
+    /* left:25% //Original*/
+    left:50%;
     animation: movimientoCircular 15s linear infinite;
     
 }
