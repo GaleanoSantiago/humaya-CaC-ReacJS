@@ -274,7 +274,7 @@ body{
         /* animation:none; */
     }
     #inicio .row .col-12 .cont-icon .icon{
-        width:60px;
+        width:70px;
         margin:auto;
     }
     
@@ -321,7 +321,9 @@ body{
         background: rgba(0, 0, 0, 0.3) !important;
 
     }
-
+    /* #inicio .row .col-12 .cont-icon .icon{
+        width:70px;
+    } */
 }
 
 /*Celulares angostos*/
