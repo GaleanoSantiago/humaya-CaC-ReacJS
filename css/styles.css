@@ -85,6 +85,9 @@
     --gameBlueLight: #1e293b; 
     --gameLips: #be123c; /*190 18 60*/
     --gameBlood: #BE1206; /*190 18 6*/
+
+    /* colores de HUMAYA */
+    --second:#bca177;
 }
 
 body{
@@ -92,7 +95,7 @@ body{
     max-width: 100% !important;
     overflow-x: hidden !important;
     scroll-behavior: smooth;
-    /* background:var(--z1); */
+    background:var(--z1);
     height:1000vh;
 }
 
@@ -122,10 +125,10 @@ body{
     height:600px;
 }
 
-#inicio .row>.col-12{
+#inicio .row>.col-blur{
     /* From https://css.glass */
     background: rgba(0, 0, 0, 0.36);
-    border-radius: 16px;
+    border-radius: 10px;
     box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -133,9 +136,61 @@ body{
     padding:20px 20px;
 
 }
+#inicio .row .col-blur .div-btn{
+    display:flex;
+    justify-content:center;
+}
+
 #inicio .row>.col-12 button{
     padding:10px 30px;
     border-radius:50px;
+}
+#inicio .row .col-12 .cont-icon{
+    width:100px;
+    position: absolute;
+    /* border:1px solid red; */
+    left:25%;
+    /* top: 50%; */
+    animation: movimientoCircular 15s linear infinite;
+    
+}
+#inicio .row .col-12 .cont-icon span{
+    font-weight:bolder;
+}
+#inicio .row .col-12 .icon{
+    /* width:100px; */
+    background:var(--bs-light);
+    border-radius:50%;
+    padding:5px;
+    box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
+
+}
+#inicio .row .col-12 .icon img{
+    width:100%;
+} 
+#inicio .row .col-12 .icon:nth-child(1) img{
+    width:90% !important;
+}
+/* Delay para los iconos */
+.img-animate-1 {
+    animation-delay: -5s !important;
+}
+
+.img-animate-2 {
+    animation-delay: -10s !important;
+}
+
+.img-animate-3 {
+    animation-delay: -15s !important;
+}
+
+@keyframes movimientoCircular {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
+    }
 }
 /* ------------------------------------------Seccion de media querys------------------------------------------ */
 /* Escritorio extra grande */
@@ -145,6 +200,25 @@ body{
         gap:60px;
 
     }
+
+    /* --------------------- Inicio ---------------------*/
+
+    #inicio .row .col-blur .div-btn{
+        justify-content:end;
+    }
+
+    #inicio .row .col-12 .cont-icon{
+        width:115px;
+    }
+
+    @keyframes movimientoCircular {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg) translateX(150px) rotate(-360deg);
+        }
+    }
 }
 
 /* Escritorio grande */
@@ -153,5 +227,108 @@ body{
     #navbar .navbar-nav{
         gap:60px;
 
+    }
+
+    /* --------------------- Inicio ---------------------*/
+    #inicio .row .col-blur .div-btn{
+        justify-content:end;
+    }
+
+
+    #inicio .row .col-12 .cont-icon{
+        width:115px;
+    }
+    @keyframes movimientoCircular {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg) translateX(150px) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg) translateX(150px) rotate(-360deg);
+        }
+    }
+}
+
+/* Tablets y smartphones */
+@media only screen and (max-width: 767px){
+    /* --------------------- Inicio ---------------------*/
+
+    /* Altura general */
+    #inicio, #inicio .row{
+        /* padding:40px 0; */
+        height:550px;
+    }
+    #inicio .row>.col-12 button{
+        margin:auto !important;
+    }
+    
+    #inicio .row .col-icons{
+        height:200px;
+        /* border:1px solid red; */
+        padding-top:40px;
+        position:relative;
+    }
+    #inicio .row .col-12 .cont-icon{
+        width:100px;
+        left:50%;
+        top: 50%;
+        /* animation:none; */
+    }
+    #inicio .row .col-12 .cont-icon .icon{
+        width:60px;
+        margin:auto;
+    }
+    
+    @keyframes movimientoCircular {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg) translateX(80px) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg) translateX(80px) rotate(-360deg);
+        }
+    }
+}
+
+/* Tablets y smartphones MAS ESPECIFICO*/
+@media only screen and (min-width: 768px) and (max-width: 991px){
+
+}
+
+/*Celulares*/
+@media only screen and (max-width: 575px){
+/* --------------------- General ---------------------*/
+    p{
+        font-size:0.88rem;
+    }
+
+/* --------------------- Inicio ---------------------*/
+    #inicio{
+        background-size: 270%;
+        /* background-position:20% 20%; */
+    }
+
+    #inicio .col-blur{
+        width:90%;
+        margin:auto;
+    }
+}
+
+/* Mediaqueries especial pantallas pequeñas */
+@media only screen and (max-width:465px){
+/* --------------------- Inicio ---------------------*/
+
+    #inicio .col-blur{
+        width:95%;
+        background: rgba(0, 0, 0, 0.3) !important;
+
+    }
+
+}
+
+/*Celulares angostos*/
+@media only screen and (max-width:375px){
+/* --------------------- Inicio ---------------------*/
+    #inicio{
+        background-size: 300%;
+        /* background-position:50% 80%; */
     }
 }
