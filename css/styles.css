@@ -97,6 +97,7 @@ body{
     scroll-behavior: smooth;
     background:var(--z1);
     height:1000vh;
+    color:var(--bs-light);
 }
 
 /* --------------------- Navbar ---------------------*/
@@ -107,6 +108,30 @@ body{
 #navbar ul{
     /* margin-right:50px; */
     font-size:1.25rem;
+}
+nav.fixed#navbar {
+    animation: popDown 0.5s;
+}
+
+
+nav.fixed {
+    bottom: inherit;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width:100%;
+    z-index: 3; /*Quitar mas tarde si hace falta*/
+}
+
+@keyframes popDown {
+    0% {
+      transform: translateY(-100px);
+    }
+  }
+
+.active-item{           /*Para utilizar en js*/
+    color:var(--bs-danger) !important;
+    transform: translateX(5px) scale(1) !important;
 }
 
 /* --------------------- Inicio ---------------------*/
@@ -190,6 +215,51 @@ body{
     100% {
         transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg);
     }
+}
+
+/* ------------------------------------------ Productos ------------------------------------------ */
+#productos{
+    padding:0 0 30px;
+}
+#productos h1{
+    text-align:center;
+    color:var(--second);
+    background:var(--dark-brauty-3);
+    padding:25px 0;
+    margin-bottom:0;
+}
+#productos .col-prod-text{
+    padding:60px 100px;
+    background:var(--dark-github);
+}
+#productos .col-prod-text h2{
+    color:var(--second);
+    text-align:center;
+    margin-bottom:40px;
+}
+#productos .col-prod-text .text-gold{
+    color:var(--second);
+    font-weight:bolder;
+}
+#productos .col-prod-text .cont-btn-prod{
+    text-align:center;
+    padding:40px 0 0 0;
+    /* border:1px solid #fff; */
+}
+#productos .col-prod-text .cont-btn-prod button{
+    border:1px solid var(--second);
+    border-radius:0;
+    color:var(--second);
+}
+#productos .col-prod-img{
+    overflow:hidden;
+    /* max-height:400px; */
+    padding:0;
+}
+#productos .col-prod-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;       /*Para que la imagen no se quede chata :p */
 }
 /* ------------------------------------------Seccion de media querys------------------------------------------ */
 /* Escritorio extra grande */
