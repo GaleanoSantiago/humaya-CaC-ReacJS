@@ -88,6 +88,7 @@
 
     /* colores de HUMAYA */
     --second:#bca177;
+    --bs-brown:#ac7647;
 }
 
 body{
@@ -125,9 +126,9 @@ nav.fixed {
 
 @keyframes popDown {
     0% {
-      transform: translateY(-100px);
+        transform: translateY(-100px);
     }
-  }
+}
 
 .active-item{           /*Para utilizar en js*/
     color:var(--bs-danger) !important;
@@ -218,15 +219,17 @@ nav.fixed {
 }
 
 /* ------------------------------------------ Productos ------------------------------------------ */
-#productos{
+/* #productos, #recetas{
     padding:0 0 30px;
-}
-#productos h1{
+} */
+#productos h1, #recetas h1, #contacto h1, #locales h1{
     text-align:center;
     color:var(--second);
     background:var(--dark-brauty-3);
     padding:25px 0;
     margin-bottom:0;
+    box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
+
 }
 #productos .col-prod-text{
     padding:60px 100px;
@@ -246,10 +249,11 @@ nav.fixed {
     padding:40px 0 0 0;
     /* border:1px solid #fff; */
 }
-#productos .col-prod-text .cont-btn-prod button{
+#productos .col-prod-text .cont-btn-prod button, .btn-recipe{
     border:1px solid var(--second);
     border-radius:0;
     color:var(--second);
+    background:var(--bs-dark);
 }
 #productos .col-prod-img{
     overflow:hidden;
@@ -260,6 +264,84 @@ nav.fixed {
     width:100%;
     height:100%;
     object-fit:cover;       /*Para que la imagen no se quede chata :p */
+}
+
+/* ------------------------------------------ Recetas ------------------------------------------ */
+#recetas{
+    background:var(--second);
+}
+#recetas .row{
+    padding:40px 0;
+}
+#recetas .card-recipe{
+    width:95%;
+    background:var(--dark-github);
+    border-radius:7px;
+    box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
+
+}
+#recetas .card-recipe .img-recipe{
+    height:250px;
+    overflow:hidden;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+#recetas .card-recipe .img-recipe img{
+    width:100%;
+    height:100%;
+    object-fit:cover;       /*Para que la imagen no se quede chata :p */
+}
+#recetas .card-recipe .body-recipe {
+    padding:30px;
+}
+#recetas .card-recipe .body-recipe h3{
+    color:var(--second);
+    text-align:center;
+}
+
+#recetas .card-recipe .body-recipe p{
+    text-align:justify;
+}
+
+/* ------------------------------------------ Locales ------------------------------------------ */
+#locales{
+    background:var(--second);
+}
+#locales .container{
+    padding:40px 0;
+}
+#locales .row{
+    padding:10px;
+}
+#locales .locales-map{
+    padding:0;
+    /* border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px; */
+    box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
+
+}
+#locales .locales-map iframe{
+    width:100%;
+    height:100%;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+#locales .locales-body{
+    background:var(--dark-github);
+    padding:40px;
+    /* min-height:300px; */
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
+
+}
+
+#locales .locales-body h3{
+    color:var(--bs-brown);
+}
+
+#locales .locales-body h4{
+    color:var(--second);
 }
 /* ------------------------------------------Seccion de media querys------------------------------------------ */
 /* Escritorio extra grande */
@@ -288,6 +370,11 @@ nav.fixed {
             transform: translate(-50%, -50%) rotate(360deg) translateX(150px) rotate(-360deg);
         }
     }
+
+    /* --------------------- Recetas ---------------------*/
+    /* #recetas .row{
+        padding:60px 0;
+    } */
 }
 
 /* Escritorio grande */
@@ -315,6 +402,11 @@ nav.fixed {
             transform: translate(-50%, -50%) rotate(360deg) translateX(150px) rotate(-360deg);
         }
     }
+
+    /* --------------------- Recetas ---------------------*/
+    /* #recetas .row{
+        padding:60px 0;
+    } */
 }
 
 /* Tablets y smartphones */
@@ -355,11 +447,45 @@ nav.fixed {
             transform: translate(-50%, -50%) rotate(360deg) translateX(80px) rotate(-360deg);
         }
     }
-}
+    /* --------------------- Recetas ---------------------*/
 
+    #recetas .card-recipe{
+        margin:20px 0;
+    }
+    #recetas .row{
+        display:flex; 
+        justify-content:center;
+    }
+    #recetas .card-recipe .img-recipe{
+        height:200px;
+    }
+    /* --------------------- Locales ---------------------*/
+    #locales .locales-map{
+        height:300px;
+    }
+    #locales .locales-map iframe{
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+    }
+    #locales .locales-body{
+        border-bottom-right-radius: 7px;
+        border-bottom-left-radius: 7px;
+        text-align:center;
+    }
+
+}
 /* Tablets y smartphones MAS ESPECIFICO*/
 @media only screen and (min-width: 768px) and (max-width: 991px){
+    /* --------------------- Productos ---------------------*/
 
+    #productos .col-prod-text{
+        padding:50px;
+    }
+    /* --------------------- Recetas ---------------------*/
+
+    #recetas .card-recipe .img-recipe{
+        height:200px;
+    }
 }
 
 /*Celulares*/
@@ -372,12 +498,28 @@ nav.fixed {
 /* --------------------- Inicio ---------------------*/
     #inicio{
         background-size: 270%;
-        /* background-position:20% 20%; */
     }
 
     #inicio .col-blur{
         width:90%;
         margin:auto;
+    }
+/* --------------------- Productos ---------------------*/
+    #productos .col-prod-text{
+        padding:50px;
+        text-align:justify;
+    }
+/* --------------------- Recetas ---------------------*/
+
+    #recetas .card-recipe{
+        width:400px;
+    }
+    #recetas .card-recipe .img-recipe{
+        height:200px;
+    }
+    /* --------------------- Locales ---------------------*/
+    #locales .container{
+        padding:30px 20px;
     }
 }
 
@@ -390,9 +532,18 @@ nav.fixed {
         background: rgba(0, 0, 0, 0.3) !important;
 
     }
-    /* #inicio .row .col-12 .cont-icon .icon{
-        width:70px;
-    } */
+
+    /* --------------------- Productos ---------------------*/
+    #productos .col-prod-text{
+        padding:40px;
+    }
+
+    /* --------------------- Recetas ---------------------*/
+
+    #recetas .card-recipe{
+        width:95%;
+    }
+    
 }
 
 /*Celulares angostos*/
