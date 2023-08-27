@@ -353,14 +353,11 @@ nav.fixed {
 #contacto .form-container{
     background:var(--dark-github);
     box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
-
+    padding:10px;
+    border-radius:7px;
 }
 #contacto .container{
     padding:40px 0;
-}
-#contacto .form-container{
-    padding:10px;
-    border-radius:7px;
 }
 
 .redes-section{
@@ -632,6 +629,12 @@ footer h3{
     /* --------------------- Locales ---------------------*/
     #locales .container{
         padding:30px 20px;
+    }
+    /* --------------------- Contacto ---------------------*/
+
+    #contacto .form-container{        
+        padding:10px 0;
+        margin:0 10px;
     }
 }
 
