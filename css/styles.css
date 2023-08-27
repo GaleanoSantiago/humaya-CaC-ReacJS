@@ -167,7 +167,7 @@ nav.fixed {
     justify-content:center;
 }
 
-#inicio .row>.col-12 button{
+#inicio .row>.col-12 a{
     padding:10px 30px;
     border-radius:50px;
 }
