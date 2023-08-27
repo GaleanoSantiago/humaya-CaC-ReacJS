@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Humaya</title>
+    <link rel="icon" href="./img/logo.png">
     <!-- CSS Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" 
@@ -271,14 +272,109 @@
         </section>
         <section id="contacto">
             <h1>CONTACTO</h1>
+            <div class="container">
+                <div class="row form-container">
+                    <div class="col-12 col-lg-4 col-md-5 col-sm-12 redes-section order-lg-first order-md-first order-sm-last order-last">
+                        <div class="mb-3">
+                            <span>
+                            <i class="fa fa-envelope"></i> <h4>Correo</h4></span>
+                            <ul>
+                                <li>
+                                    humayadulces@gmail.com
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mb-3">
+                            <span>
+                                <i class="fa fa-facebook"></i> <h4>Facebook</h4>
+                            </span> 
+                            <ul>
+                                <li>Humaya Dulces</li>
+                            </ul>
+                        </div>
+                        <div class="mb-3">
+                            <span>
+                                <i class="fa fa-instagram"></i> <h4>Instagram</h4>
+                            </span>
+                            <ul>
+                                <li>Humaya Dulces</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-8 col-md-7 col-sm-12 order-lg-last order-md-last order-sm-first order-first">
+                        <form action="" autocomplete="off">
+                            <div class="mb-3">
+                                <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre Completo">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <input type="number" name="tel" id="tel" class="form-control" placeholder="Número de Telefono">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" name="asunto" id="asunto" class="form-control" placeholder="Asunto">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" name="" id="" rows="3" placeholder="Mensaje"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <button class="btn btn-submit" id="btnSubmit">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-4 col-md-4 col-sm-6">
+                    <h3>Humaya Dulces</h3>
+                    <img src="./img/logo.png" alt="">
+                </div>
+                <div class="col-12 col-lg-4 col-md-4 col-sm-6">
+                    <h3>Navegacion</h3>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#recetas">Recetas</a></li>
+                        <li><a href="#locales">Locales</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-4 col-md-4 col-sm-6">
+                    <h3>Contactanos</h3>
+                    <div class="mb-2">
+                        <i class="fa fa-envelope"></i>
+                        <a href="#">humayadulces@gmail.com</a>
+                    </div>
+                    <div class="mb-2">
+                        <i class="fa fa-facebook"></i>
+                        <a href="#">Humaya Dulces</a>
+                    </div>
+                    <div class="mb-2">
+                        <i class="fa fa-instagram"></i>
+                        <a href="#">Humaya Dulces</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>Desarrollado por <a href="https://galeanosantiago.github.io/Portfolio/" target="_blank">Galeano Santiago</a> </p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <!-- JS Propios -->
     <script src="./js/main.js"></script>
+    <!-- Font Awesome cuenta de Galeano -->
+    <script src="https://kit.fontawesome.com/52ab3134b2.js" crossorigin="anonymous"></script>
     <!-- Animaciones AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>        /*Inicializacion*/

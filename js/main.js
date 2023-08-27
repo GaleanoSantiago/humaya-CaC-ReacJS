@@ -1,5 +1,9 @@
 const menu = document.getElementById("navbar");
 const openCloseSign = document.querySelectorAll(".close-open-sign");
+const btnForm = document.getElementById("btnSubmit");
+const inputsForm = document.querySelectorAll(".form-control");
+// console.log(inputsForm);
+
 addEventListener("scroll",()=>{
     
     //scroll para que el menu se fije en el top de la pantalla
@@ -41,5 +45,13 @@ const horaAbierto = ()=>{
         })
     }
 }
+
+btnForm.addEventListener("click",(e)=>{
+    e.preventDefault();
+    inputsForm.forEach(input =>{
+        input.value="";
+    });
+    alert("Correo Enviado");
+})
 
 horaAbierto();

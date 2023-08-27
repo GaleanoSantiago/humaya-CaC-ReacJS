@@ -97,7 +97,7 @@ body{
     overflow-x: hidden !important;
     scroll-behavior: smooth;
     background:var(--z1);
-    height:1000vh;
+    /* height:1000vh; */
     color:var(--bs-light);
 }
 
@@ -342,6 +342,118 @@ nav.fixed {
 
 #locales .locales-body h4{
     color:var(--second);
+}
+
+/* ------------------------------------------ Contacto ------------------------------------------ */
+
+#contacto{
+    background:var(--second);
+}
+
+#contacto .form-container{
+    background:var(--dark-github);
+    box-shadow: 0 7px 20px 0 rgb(0 0 0 / 20%), 0 4px 10px 0 rgb(0 0 0 / 20%);
+
+}
+#contacto .container{
+    padding:40px 0;
+}
+#contacto .form-container{
+    padding:10px;
+    border-radius:7px;
+}
+
+.redes-section{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:30px;
+}
+
+#contacto .redes-section span{
+    display:flex;
+    align-items: center;
+    gap:10px;
+}
+
+#contacto i{
+    font-size:30px;
+    background:var(--bs-brown);
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#contacto ul li{
+    list-style: none;
+    margin-top:10px;
+}
+
+#contacto form{
+    padding:20px;
+}
+
+#contacto input, #contacto textarea{
+    background:var(--bs-dark);
+    color:var(--bs-light);
+    padding:7px;
+    border-radius:3px;
+}
+#contacto textarea{
+    height:150px;
+}
+
+#contacto .btn-submit{
+    width:100%;
+    border:1px solid var(--second);
+    border-radius: 0;
+    color:var(--second);
+    background: var(--bs-dark);
+}
+
+/* ------------------------------------------ Footer ------------------------------------------ */
+footer{
+    padding:30px 0 0;
+}
+
+footer img{
+    width:200px;
+}
+
+/* footer .col-12{
+    text-align:center;
+} */
+
+footer li{
+    font-size:1.2rem;
+}
+footer li a{
+    text-decoration:none;
+    color:var(--bs-gray-500);
+    transition: color .4s ease;
+}
+footer li a:hover, footer a:hover{
+    color:var(--bs-brown);
+    transition: color .4s ease;
+}
+
+footer i{
+    font-size:2rem;
+    color:var(--second);
+    /* font-weight:bolder; */
+}
+footer a{
+    color:var(--bs-gray-500);
+    transition:color .4s ease;
+    text-decoration:none;
+    font-size:1.2rem;
+}
+footer h3{
+    color:var(--second);
+    /* font-weight:bolder; */
 }
 /* ------------------------------------------Seccion de media querys------------------------------------------ */
 /* Escritorio extra grande */
